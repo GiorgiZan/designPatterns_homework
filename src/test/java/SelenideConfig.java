@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Configuration.holdBrowserOpen;
 
-public class Config {
+public class SelenideConfig {
     @BeforeMethod
     public void ConfigTests() {
         ChromeOptions options = new ChromeOptions();

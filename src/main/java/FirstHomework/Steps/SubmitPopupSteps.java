@@ -1,7 +1,7 @@
-package Steps;
+package FirstHomework.Steps;
 
-import Data.FormLogin;
-import Pages.SubmitPopupPage;
+import FirstHomework.Data.FormLogin;
+import FirstHomework.Pages.SubmitPopupPage;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;

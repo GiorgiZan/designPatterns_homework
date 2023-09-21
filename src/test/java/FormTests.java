@@ -1,12 +1,12 @@
-import Steps.EnterDataSteps;
-import Steps.FormsSteps;
-import Steps.PracticeFormSteps;
-import Steps.SubmitPopupSteps;
+import FirstHomework.Steps.EnterDataSteps;
+import FirstHomework.Steps.FormsSteps;
+import FirstHomework.Steps.PracticeFormSteps;
+import FirstHomework.Steps.SubmitPopupSteps;
 import com.codeborne.selenide.Selenide;
 import org.testng.annotations.Test;
 
 
-public class FormTests extends Config {
+public class FormTests extends SelenideConfig {
     FormsSteps formsSteps = new FormsSteps();
     PracticeFormSteps practiceFormSteps = new PracticeFormSteps();
     EnterDataSteps enterDataSteps = new EnterDataSteps();

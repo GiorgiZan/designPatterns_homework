@@ -1,7 +1,6 @@
-package Steps;
+package FirstHomework.Steps;
 
-import Data.FormLogin;
-import Pages.FormsPage;
+import FirstHomework.Pages.FormsPage;
 import io.qameta.allure.Step;
 
 public class FormsSteps {
