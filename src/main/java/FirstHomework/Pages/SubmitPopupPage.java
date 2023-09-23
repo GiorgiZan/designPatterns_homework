@@ -1,4 +1,4 @@
-package Pages;
+package FirstHomework.Pages;
 
 import com.codeborne.selenide.SelenideElement;
 

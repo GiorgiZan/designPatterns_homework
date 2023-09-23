@@ -1,4 +1,4 @@
-package Data;
+package FirstHomework.Data;
 
 public class FormLogin {
     public final String firstName = "Giorgi",
