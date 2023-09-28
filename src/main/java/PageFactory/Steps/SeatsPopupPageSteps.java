@@ -15,21 +15,21 @@ public class SeatsPopupPageSteps {
         seatsPopupPage = new SeatsPopupPage(driver);
     }
 
-    @Step
+    @Step("Getting actual movie title (in popup)")
     public String getActualMovieTitle(){
         return seatsPopupPage.actualMovieTitle.getText();
     }
-    @Step
+    @Step("Getting actual cinema name (in popup)")
     public String getActualCinema(){
         WebElement cinema = seatsPopupPage.actualCinemaAndDate.get(0);
         return cinema.getText();
     }
-    @Step
+    @Step("Getting actual movie date (in popup)")
     public String getActualDate(){
         WebElement date = seatsPopupPage.actualCinemaAndDate.get(1);
         return date.getText().split(" ")[0];
     }
-    @Step
+    @Step("Clicking on available seat")
     public SeatsPopupPageSteps vacantSeat(){
         seatsPopupPage.freeSeat.click();
         return this;

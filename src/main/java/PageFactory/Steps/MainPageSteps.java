@@ -13,7 +13,7 @@ public class MainPageSteps {
         this.driver = driver;
         mainPage = new MainPage(driver);
     }
-    @Step
+    @Step("Clicking on movie section button")
     public MainPageSteps clickMovieButton() {
         mainPage.movieButton.click();
         return this;

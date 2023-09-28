@@ -1,5 +1,6 @@
 package PageFactory.Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,9 @@ public class DatePlacePage {
     public  List<WebElement> dates;
     @FindBy(css = "p.name")
     public  WebElement movieName;
+
+    @FindBy(css = "div.left-content")
+    public WebElement popUp;
 
     public DatePlacePage(WebDriver driver) {
         this.driver = driver;
