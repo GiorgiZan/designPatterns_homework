@@ -18,7 +18,7 @@ public class ChooseMoviePageSteps {
         datePlacePageSteps = new DatePlacePageSteps(driver);
     }
 
-    @Step
+    @Step("Clicking on first movie which airs in east point ")
     public ChooseMoviePageSteps clickOnFirstMovie() {
         for (int i = 0; i < chooseMoviePage.allMovies.size(); i++) {
             WebElement movie = chooseMoviePage.allMovies.get(i);

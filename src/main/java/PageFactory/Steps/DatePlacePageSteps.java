@@ -11,12 +11,14 @@ import org.testng.Assert;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
 
+
 public class DatePlacePageSteps {
     WebDriver driver;
 
     DatePlacePage datePlacePage;
     JavascriptExecutor js;
     WebDriverWait wait;
+
 
     public DatePlacePageSteps(WebDriver driver) {
         this.driver = driver;
@@ -31,34 +33,34 @@ public class DatePlacePageSteps {
         return this;
 
     }
-    @Step
+    @Step("Clicking on a last date available")
     public DatePlacePageSteps clickOnLastDate() {
         datePlacePage.dates.get(datePlacePage.dates.size()-1).click();
         return this;
     }
-    @Step
-    public DatePlacePageSteps eastOptionsChecker(){
+    @Step("Clicking on {sectionName} section")
+    public DatePlacePageSteps eastOptionsChecker(String sectionName) {
         for (int i = 0; i < datePlacePage.eastPointOptions.size(); i++) {
             String elementText = (String) js.executeScript("return arguments[0].textContent;", datePlacePage.eastPointOptions.get(i));
-            Assert.assertEquals("კავეა ისთ ფოინთი", elementText);
+            Assert.assertEquals(sectionName, elementText);
         }
         return this;
     }
-    @Step
+    @Step("Clicking on last option available in east point section")
     public DatePlacePageSteps clickLastOption(){
         datePlacePage.eastPointOptions.get(datePlacePage.eastPointOptions.size()-1).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.left-content")));
+        wait.until(ExpectedConditions.visibilityOf(datePlacePage.popUp));
         return this;
     }
-    @Step
+    @Step("Getting movie date to than compare and validate in popup")
     public String getMovieDate(){
         return datePlacePage.dates.get(datePlacePage.dates.size()-1).getText().split(" ")[0];
     }
-    @Step
+    @Step("Getting movie title to then compare and validate in popup")
     public String getMovieName(){
         return datePlacePage.movieName.getText();
     }
-    @Step
+    @Step("Getting cinema name to than compare and validate in popup")
     public String getCinemaName(){
         return datePlacePage.eastPointOptions.get(datePlacePage.eastPointOptions.size()-1).getText();
     }
